@@ -45,6 +45,8 @@ ARCHIVE_REASONS = {
 PUBLIC_UNAUTH = {
     "/",
     "/index.html",
+    "/login",
+    "/login.html",
     "/styles.css",
     "/app.js",
     "/config.json",
@@ -299,6 +301,8 @@ class Handler(BaseHTTPRequestHandler):
         # static
         if path == "/":
             rel = "index.html"
+        elif path == "/login":
+            rel = "login.html"
         else:
             rel = path.lstrip("/")
         target = (PUBLIC / rel).resolve()
@@ -306,7 +310,7 @@ class Handler(BaseHTTPRequestHandler):
             self._set_common(404, "text/plain; charset=utf-8")
             self.wfile.write(b"not found\n")
             return
-        if path not in PUBLIC_UNAUTH and not path.startswith("/stores/") and not authorized:
+        if path not in PUBLIC_UNAUTH and not path.startswith("/stores/") and not path.startswith("/demo/") and not authorized:
             # Protect catalog and anything unexpected
             if path.startswith("/data/"):
                 return self._deny(False)

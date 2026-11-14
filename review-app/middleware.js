@@ -11,6 +11,7 @@ const PUBLIC_PATHS = new Set([
 function isPublic(pathname) {
   if (PUBLIC_PATHS.has(pathname)) return true;
   if (pathname.startsWith("/fonts/")) return true;
+  if (pathname.startsWith("/demo/")) return true;
   return false;
 }
 

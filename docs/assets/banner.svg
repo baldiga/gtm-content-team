@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="900" viewBox="0 0 2400 900" role="img" aria-label="Meeting to content, a Grok Bot team template, by Amir Baldiga">
+  <rect width="2400" height="900" fill="#F3EFE7"/>
+  <rect width="28" height="900" fill="#B4451A"/>
+  <rect width="2400" height="8" fill="#1C1916"/>
+  <rect y="892" width="2400" height="8" fill="#1C1916"/>
+  <text x="2100" y="420" text-anchor="end" font-family="Georgia, 'Times New Roman', serif" font-size="420" font-weight="700" fill="#E4DCD0">2.8</text>
+  <text x="140" y="150" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#B4451A" letter-spacing="4">GROK BOT TEAM TEMPLATE</text>
+  <text x="136" y="290" font-family="Georgia, 'Times New Roman', serif" font-size="128" fill="#1C1916">Meeting to content</text>
+  <text x="140" y="370" font-family="Inter, Helvetica, Arial, sans-serif" font-size="36" fill="#5E584F">Turn a week of meetings into a week of posts,</text>
+  <text x="140" y="420" font-family="Inter, Helvetica, Arial, sans-serif" font-size="36" fill="#5E584F">with you still in the loop.</text>
+  <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="650">
+    <rect x="140" y="520" width="176" height="70" rx="28" fill="#fff" stroke="#D6CFC3" stroke-width="3"/>
+    <text x="228" y="565" text-anchor="middle" fill="#1C1916">Meet</text>
+    <rect x="354" y="520" width="210" height="70" rx="28" fill="#fff" stroke="#D6CFC3" stroke-width="3"/>
+    <text x="459" y="565" text-anchor="middle" fill="#1C1916">Insights</text>
+    <rect x="602" y="520" width="176" height="70" rx="28" fill="#fff" stroke="#D6CFC3" stroke-width="3"/>
+    <text x="690" y="565" text-anchor="middle" fill="#1C1916">Draft</text>
+    <rect x="816" y="520" width="196" height="70" rx="28" fill="#B4451A"/>
+    <text x="914" y="565" text-anchor="middle" fill="#F3EFE7">Review</text>
+    <rect x="1050" y="520" width="210" height="70" rx="28" fill="#fff" stroke="#D6CFC3" stroke-width="3"/>
+    <text x="1155" y="565" text-anchor="middle" fill="#1C1916">Publish</text>
+  </g>
+  <text x="2320" y="850" text-anchor="end" font-family="Inter, Helvetica, Arial, sans-serif" font-size="24" fill="#5E584F">by Amir Baldiga</text>
+</svg>

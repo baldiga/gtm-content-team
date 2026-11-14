@@ -1,22 +1,29 @@
+<div align="center">
+
+<img src="docs/assets/banner.png" alt="Meeting to content: a Grok Bot team template, by Amir Baldiga" width="900" />
+
+<p>
+  <img src="https://img.shields.io/badge/license-MIT-B4451A?style=flat-square&labelColor=1C1916" alt="MIT license" />
+  <img src="https://img.shields.io/badge/Grok_Bot-team_ready-B4451A?style=flat-square&labelColor=1C1916" alt="Grok Bot" />
+  <img src="https://img.shields.io/badge/Vercel-review_app-B4451A?style=flat-square&labelColor=1C1916" alt="Vercel" />
+  <img src="https://img.shields.io/badge/Granola-meetings-B4451A?style=flat-square&labelColor=1C1916" alt="Granola" />
+  <img src="https://img.shields.io/badge/Buffer-scheduling-B4451A?style=flat-square&labelColor=1C1916" alt="Buffer" />
+  <img src="https://img.shields.io/badge/Cloudinary-images-B4451A?style=flat-square&labelColor=1C1916" alt="Cloudinary" />
+</p>
+
 # Meeting-to-content team
 
-A plug-and-play package for a small Grok Bot team that turns business meetings into a week of social content: insight packs, drafted posts, branded graphics, a private review app, Buffer scheduling, and a company brain that turns review comments into lasting rules.
+<strong>Turn a week of meetings into a week of posts, with you still in the loop.</strong>
 
-This repository holds the shared code and the empty working folders. The bots themselves live in your Grok Bot account. Import one template per role (links below are placeholders until those templates are published), point them at a clone of this repo, and fill in your brand.
+<p>A plug-and-play Grok Bot team that reads Granola notes, drafts social copy, designs branded graphics, and waits for your approval in a private review app before anything is scheduled in Buffer.</p>
 
-Built by Amir Baldiga · gtmengineer.online
+</div>
 
-## What you get
-
-- A password-protected, mobile-first **review app** you can deploy on Vercel
-- **Sync and brain tooling** so comments become lessons, and approvals become a gold-standard library
-- A **carousel and template kit** for Hebrew RTL LinkedIn, Instagram and X graphics
-- An empty **company brain**: standing rules, a goals template, a weekly recap format, and folders for approved examples and inspiration
-- Role briefs so a Grok Bot user can recreate Granola Notes, Content Writer, Carousel Designer, Publisher and Analyst, the Coordinator, and an optional Reel Producer
+This repository is the shared kit: the review app, the company brain, the carousel renderer, and empty working folders. The bots live in your Grok Bot account. Import one template per role (placeholder links below), point them at a clone of this repo, and fill in your brand.
 
 It does not include anyone's meetings, posts, photos, API keys, or analytics.
 
-## Team diagram
+## How the team works
 
 ```mermaid
 flowchart LR
@@ -32,9 +39,76 @@ flowchart LR
   Buffer --> Ledger[Analytics and ledger]
 ```
 
-The Coordinator sits with the owner, assigns work, and enforces the standing rules. See [docs/architecture.md](docs/architecture.md) for the full pipeline, privacy gates and folder map.
+The Coordinator sits with you, assigns work, and enforces the standing rules. The longer map, privacy gates, and folder layout are in [docs/architecture.md](docs/architecture.md).
 
-## Prerequisites
+## The bots
+
+| | Role | Connectors | Handoff |
+|---|---|---|---|
+| 🧭 | **[Coordinator](docs/bot-coordinator.md)** | Repo, review app, team group | Your brief becomes tasks for the rest of the team |
+| 🎙️ | **[Granola Notes](docs/bot-granola-notes.md)** | Granola | Meetings become anonymized insight packs |
+| ✍️ | **[Content Writer](docs/bot-content-writer.md)** | Repo, review app | Packs become channel-ready copy |
+| 🎨 | **[Carousel Designer](docs/bot-carousel-designer.md)** | Repo, Cloudinary, review app | Copy becomes branded graphics |
+| 📡 | **[Publisher and Analyst](docs/bot-publisher-and-analyst.md)** | Buffer, review app | Approved pieces are scheduled, logged, and measured |
+| 🎬 | **[Reel Producer](docs/bot-reel-producer.md)** (optional) | Avatar or reel tool | A short video is attached for review, if you turn reels on |
+
+Nothing is scheduled or published without your approval in the review app.
+
+## The review app
+
+A password-protected, mobile-first page. You see every post and every image, leave a comment, and tap approve or needs changes. The team reads that feedback with `sync.py` and comes back with a new version.
+
+The shots below use obviously fake demo copy (`LI-DEMO`, `IG-DEMO`, `X-DEMO`). No real meetings or posts.
+
+<div align="center">
+  <img src="docs/assets/review-app-week.jpg" alt="Review app week view with dummy demo posts in Hebrew, including a pending LinkedIn piece and an Instagram piece that asked for changes" width="720" />
+  <p>
+    <img src="docs/assets/review-app-login.png" alt="Password login screen of the review app, title in Hebrew: content for approval" width="380" />
+    &nbsp;
+    <img src="docs/assets/review-app-mobile.png" alt="Mobile review app showing the demo week filters and the first pending post" width="230" />
+  </p>
+</div>
+
+Local setup and the Vercel deploy notes live in [review-app/README.md](review-app/README.md). The sample catalog ships with these three demo pieces so the page is not empty the first time you run it.
+
+## Quick start in 15 minutes
+
+1. **Clone this repo** and copy the config files (about 2 minutes):
+
+   ```bash
+   git clone <this-repo>
+   cd meeting-to-content-team
+   cp config/brand.example.json config/brand.json
+   cp .env.example review-app/.env.local
+   ```
+
+2. **Fill in your brand** in `config/brand.json`: name, domain, colors, handles, and any blocked terms (about 3 minutes).
+
+3. **Run the review app locally** (about 3 minutes). Put a local `ACCESS_KEY` and `TEAM_API_KEY` in `review-app/.env.local`, then:
+
+   ```bash
+   cd review-app
+   python3 server.py
+   ```
+
+   Open `http://127.0.0.1:8787/?k=...` with the access key. You should see the three demo pieces. Never commit `.env.local`.
+
+4. **Render a demo graphic** (about 4 minutes), after Chrome, Pillow and the Rubik or Heebo fonts are available:
+
+   ```bash
+   python3 carousel-kit/templates_kit/tk.py carousel-kit/templates_kit/specs/demo-week.json -o outputs/demo
+   ```
+
+   The footer will show the name and domain from `config/brand.json`.
+
+5. **Create the bots** (about 3 minutes now, or later the same day): open each brief in `docs/`, create a Grok Bot, and paste the intro chat. Add them to one group. Template import links are placeholders until you publish the templates.
+
+That is enough to see the loop. Connecting Granola, Buffer, Cloudinary and Vercel is the next section.
+
+## Full setup
+
+<details>
+<summary>Prerequisites</summary>
 
 - A [Grok Bot](https://grok.com) account, so you can create the team
 - [Granola](https://granola.ai), for meeting notes
@@ -44,41 +118,56 @@ The Coordinator sits with the owner, assigns work, and enforces the standing rul
 - Optional: GitHub, to host this repo and to let each bot clone it
 - Optional: an avatar or reel tool if you turn short video on later
 
-Chrome, the Rubik font, Python 3 with Pillow, and ffmpeg are needed on the machine that renders graphics.
+Chrome, a Hebrew-capable font (Rubik or Heebo), Python 3 with Pillow, and ffmpeg are needed on the machine that renders graphics.
 
-## Setup
+</details>
 
-1. **Clone this repository** and create a private working copy for live weeks (or keep `weeks/`, `insight-packs/` and `ledger.csv` untracked, as `.gitignore` already does).
-2. **Copy the config files** and fill them in:
+<details>
+<summary>1. Brand, env, and goals</summary>
 
-   ```bash
-   cp config/brand.example.json config/brand.json
-   cp .env.example review-app/.env.local
-   ```
+Copy and fill the private config files. They are gitignored.
 
-   In `config/brand.json` set your name, domain, colors, handles and any blocked terms. In `.env.local` set `TEAM_API_KEY` and a local `ACCESS_KEY`. Never commit those files.
+```bash
+cp config/brand.example.json config/brand.json
+cp .env.example review-app/.env.local
+```
 
-3. **Deploy the review app** to Vercel from `review-app/`. Set `TEAM_API_KEY`, `ACCESS_KEY_SHA256`, `SESSION_SECRET`, `BLOB_READ_WRITE_TOKEN`, `OWNER_ID`, `OWNER_LABEL` and `TIMEZONE`. Hash the review password with:
+In `config/brand.json` set your name, domain, colors, handles and any blocked terms. In `.env.local` set `TEAM_API_KEY` and a local `ACCESS_KEY`. Fill `brain/goals.md` with your targets, publishing windows and meeting-batch cadence.
 
-   ```bash
-   python3 -c "import hashlib,getpass; print(hashlib.sha256(getpass.getpass('Review password: ').encode()).hexdigest())"
-   ```
+Never commit real keys, tokens or passwords.
 
-   Do not put the plaintext password in the repo or in a Vercel variable that gets logged. Details: [review-app/README.md](review-app/README.md).
+</details>
 
-4. **Connect Cloudinary and Buffer.** Put Cloudinary credentials in the environment of the machine that runs `sync.py`. Put `BUFFER_ACCESS_TOKEN` in the Publisher bot's environment. Run `python3 buffer_channels.py` once and keep channel ids in a private config, not in this repo.
+<details>
+<summary>2. Deploy the review app to Vercel</summary>
 
-5. **Fill `brain/goals.md`** with your targets, publishing windows and meeting-batch cadence.
+Deploy from the `review-app/` folder. Set `TEAM_API_KEY`, `ACCESS_KEY_SHA256`, `SESSION_SECRET`, `BLOB_READ_WRITE_TOKEN`, `OWNER_ID`, `OWNER_LABEL` and `TIMEZONE`. Hash the review password with:
 
-6. **Import each bot template** into Grok Bot (placeholder links below). Add the bots to one group. In each intro chat, connect the connectors that role needs and point the bot at this repo.
+```bash
+python3 -c "import hashlib,getpass; print(hashlib.sha256(getpass.getpass('Review password: ').encode()).hexdigest())"
+```
 
-7. **Do a dry run:** start the local review app, open the sample `LI-DEMO` piece, leave a comment, run `bash brain/review_loop.sh`, and render `carousel-kit/templates_kit/specs/demo-week.json`. Then delete the demo data before a real week.
+Do not put the plaintext password in the repo or in a Vercel variable that gets logged. The app is marked `noindex`. Approval here is only your go-ahead for the Publisher bot to schedule later. More detail is in [review-app/README.md](review-app/README.md).
 
-8. **First real week:** Granola Notes writes an insight pack, Content Writer drafts, Carousel Designer renders, you approve in the review app, Publisher schedules. Every piece needs your approval, at least for the first month.
+</details>
 
-## Import each bot template
+<details>
+<summary>3. Connect Cloudinary and Buffer</summary>
 
-Replace these placeholders with the public Grok Bot template links when they are available.
+Put Cloudinary credentials in the environment of the machine that runs `sync.py`. Put `BUFFER_ACCESS_TOKEN` in the Publisher bot's environment. Run:
+
+```bash
+python3 buffer_channels.py
+```
+
+Keep channel ids in a private config, not in this public repo.
+
+</details>
+
+<details>
+<summary>4. Import each bot template</summary>
+
+Replace these placeholders with the public Grok Bot template links when they are available. Until a link exists, create a new Grok Bot and paste the matching brief, including the intro chat at the bottom of each doc.
 
 | Role | Brief | Template link |
 |---|---|---|
@@ -89,7 +178,18 @@ Replace these placeholders with the public Grok Bot template links when they are
 | Publisher and Analyst | [docs/bot-publisher-and-analyst.md](docs/bot-publisher-and-analyst.md) | `TEMPLATE_LINK_PUBLISHER` |
 | Reel Producer (optional) | [docs/bot-reel-producer.md](docs/bot-reel-producer.md) | `TEMPLATE_LINK_REEL_PRODUCER` |
 
-Until a link exists, create a new Grok Bot and paste the matching brief, including the intro chat at the bottom of each doc.
+Add everyone to one group. In each intro chat, connect the connectors that role needs and point the bot at this repo.
+
+</details>
+
+<details>
+<summary>5. First real week</summary>
+
+Keep `weeks/`, `insight-packs/` and `ledger.csv` untracked (already in `.gitignore`) or work from a private fork.
+
+Granola Notes writes an insight pack. Content Writer drafts. Carousel Designer renders. You approve in the review app. Publisher schedules. Every piece needs your approval, at least for the first month.
+
+</details>
 
 ## Tools I use
 
@@ -103,6 +203,57 @@ If you sign up through one of these links, it may support the author of this pac
 | Vercel | Hosting the private review app | `AFFILIATE_LINK_VERCEL` |
 | APIhub (optional) | Short avatar reels, if you turn that on | `AFFILIATE_LINK_APIHUB` |
 
+## FAQ
+
+<details>
+<summary>Will my meetings or posts end up in a public repo?</summary>
+
+No, not if you follow the default gitignore. Live weeks, insight packs, the ledger, approved examples, raw review feedback and `config/brand.json` stay untracked. This package ships empty skeletons and obviously fake demo copy only.
+
+</details>
+
+<details>
+<summary>Is GitHub required?</summary>
+
+No. GitHub is a convenient way to host the kit and let each bot clone it. A private folder on the machine the bots use is enough.
+
+</details>
+
+<details>
+<summary>Do I need all six bots?</summary>
+
+You need the Coordinator plus Granola Notes, Content Writer, Carousel Designer, and Publisher and Analyst for the full loop. Reel Producer is optional and can stay off.
+
+</details>
+
+<details>
+<summary>Why is the review app in Hebrew?</summary>
+
+The kit was built for a Hebrew-first workflow (RTL layout, Hebrew status labels). Copy can be in any language you write. The brand config, docs and this README are in English so the package is easy to fork.
+
+</details>
+
+<details>
+<summary>Can I change the weekly recap format?</summary>
+
+Yes. The default hook is "2.8 things I learned this week", with three real learnings. Edit `brain/formats/weekly-recap.md` to rename the series or change the cadence.
+
+</details>
+
+<details>
+<summary>When can I publish without approving every piece?</summary>
+
+The standing rule is that nothing goes out without your approval. After the first month you can relax that in `brain/goals.md` if the edit rate and privacy flags look good. Avatar reels and privacy calls should still need a yes from you.
+
+</details>
+
+<details>
+<summary>What do I do with the affiliate placeholders?</summary>
+
+Replace `AFFILIATE_LINK_*` in this README (and in each bot's intro chat, if you mention a tool) with your own links before you share the package. Leave them as placeholders until you have the URLs.
+
+</details>
+
 ## Standing rules the team already knows
 
 - A comment is given once and applies across platforms and future weeks.
@@ -113,6 +264,24 @@ If you sign up through one of these links, it may support the author of this pac
 
 Read [brain/lessons.md](brain/lessons.md) and [brain/goals.md](brain/goals.md) before you change that list.
 
+## Contributing
+
+This is meant to be forked. If you send a change back:
+
+- Keep secrets, live weeks, meeting content and personal photos out of the pull request.
+- Keep the renderer and the review app configurable through `config/brand.json` and environment variables.
+- Do not add real names, client details or blocked-term lists that belong to one person's practice.
+- Run a secret scan (keys, tokens, emails, the usual) and `cd review-app && npm install && npm run build` before you open the PR.
+- No em or en dashes in docs or in on-image copy.
+
+Bug reports and template improvements are welcome. Please open an issue first for large changes.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+<div align="center">
+
+Built by Amir Baldiga · [gtmengineer.online](https://gtmengineer.online)
+
+</div>

@@ -15,16 +15,104 @@
       "day_he": "ראשון",
       "date": "",
       "date_he": "",
-      "body": "זה פוסט לדוגמה בלבד, לא תוכן אמיתי. החליפו את הקטלוג בשבוע שלכם אחרי שהכותב והמעצב מעלים טיוטות.",
-      "chars": 96,
+      "body": "זה פוסט לדוגמה בלבד, לא תוכן אמיתי. החליפו את הקטלוג בשבוע שלכם אחרי שהכותב והמעצב מעלים טיוטות.\n\nמה דעתכם, כדאי לנסות את זה אצלכם?",
+      "chars": 131,
       "char_limit": 1000,
       "link": "none",
       "first_comment": "",
       "version": "v1",
       "version_note": "",
       "file": "",
-      "images": [],
-      "image_pending": true
+      "images": [
+        {
+          "id": "LI-DEMO-feed",
+          "kind": "feed",
+          "label": "תמונת פיד",
+          "name": "feed",
+          "src": "/demo/li-demo-feed.jpg",
+          "original": "/demo/li-demo-feed.jpg",
+          "width": 540,
+          "height": 675
+        }
+      ],
+      "image_pending": false,
+      "format": "image"
+    },
+    {
+      "code": "IG-DEMO",
+      "title": "קרוסלה לדוגמה",
+      "platform": "instagram",
+      "platform_he": "אינסטגרם",
+      "account": "personal",
+      "day": "mon",
+      "day_he": "שני",
+      "date": "",
+      "date_he": "",
+      "body": "קרוסלה לדוגמה. שלושה שקפים מדומים, בלי תוכן אמיתי.\n\n#דוגמה #BuildInPublic",
+      "chars": 73,
+      "char_limit": 2200,
+      "link": "none",
+      "first_comment": "",
+      "version": "v2",
+      "version_note": "",
+      "file": "",
+      "images": [
+        {
+          "id": "IG-DEMO-feed",
+          "kind": "feed",
+          "label": "שקף 1",
+          "name": "feed",
+          "src": "/demo/ig-demo-feed.jpg",
+          "original": "/demo/ig-demo-feed.jpg",
+          "width": 540,
+          "height": 675
+        },
+        {
+          "id": "IG-DEMO-slide",
+          "kind": "slide",
+          "label": "שקף 2",
+          "name": "slide",
+          "src": "/demo/li-demo-feed.jpg",
+          "original": "/demo/li-demo-feed.jpg",
+          "width": 540,
+          "height": 675
+        }
+      ],
+      "image_pending": false,
+      "format": "image"
+    },
+    {
+      "code": "X-DEMO",
+      "title": "כרטיס קצר לדוגמה",
+      "platform": "x",
+      "platform_he": "X",
+      "account": "personal",
+      "day": "tue",
+      "day_he": "שלישי",
+      "date": "",
+      "date_he": "",
+      "body": "כרטיס לדוגמה לפוסט מאושר. אין כאן תוכן אמיתי, רק כדי להראות איך נראית הסקירה.",
+      "chars": 77,
+      "char_limit": 280,
+      "link": "none",
+      "first_comment": "",
+      "version": "v1",
+      "version_note": "",
+      "file": "",
+      "images": [
+        {
+          "id": "X-DEMO-feed",
+          "kind": "feed",
+          "label": "תמונת פיד",
+          "name": "feed",
+          "src": "/demo/x-demo-feed.jpg",
+          "original": "/demo/x-demo-feed.jpg",
+          "width": 540,
+          "height": 675
+        }
+      ],
+      "image_pending": false,
+      "format": "image"
     }
   ]
 }

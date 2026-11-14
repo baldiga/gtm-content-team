@@ -28,6 +28,9 @@ carousel-kit/templates_kit/_test/
 *.mp4
 *.webp
 !docs/**/*.png
+!docs/**/*.svg
+!docs/**/*.jpg
+!review-app/public/demo/**
 
 # Live workspace data (do not publish)
 ledger.csv

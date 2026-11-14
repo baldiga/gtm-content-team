@@ -13,7 +13,7 @@ python3 server.py
 
 Open `http://127.0.0.1:8787/?k=...` using the access key from `.env.local` (never commit that file, never paste the key into a post). The page is RTL, mobile-first, and marked `noindex`.
 
-A tiny sample catalog (`LI-DEMO`) ships so the page is not empty. Replace `lib/catalog.json` (and `public/data/catalog.json` if you keep a copy) with the week's pieces.
+A small sample catalog (`LI-DEMO`, `IG-DEMO`, `X-DEMO`) ships so the page is not empty. The pieces use obviously fake copy and placeholder images under `public/demo/`. Replace `lib/catalog.json` (and `public/data/catalog.json` if you keep a copy) with the week's pieces.
 
 ## How the team reads comments and pushes updates
 
