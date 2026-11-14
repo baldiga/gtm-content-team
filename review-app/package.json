@@ -1,0 +1,11 @@
+{
+  "name": "content-review-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node --check middleware.js && node --check lib/auth.js && node --check lib/logic.js && node --check lib/session.js && node --check lib/store.js && node --check lib/ratelimit.js && node --check api/action.js && node --check api/feedback.js && node --check api/login.js && node --check api/page.js && node --check api/state.js && node --check api/team.js && node --check public/app.js && node --check public/stores/local.js"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.0.0"
+  }
+}

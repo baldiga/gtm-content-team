@@ -1,0 +1,34 @@
+/* templates_kit base: personal brand, Hebrew RTL */
+@font-face{font-family:"Rubik";src:url("file:///usr/share/fonts/truetype/sand-box/google/Rubik/Rubik-VariableFont_wght.ttf") format("truetype");font-weight:100 900;font-display:block}
+@font-face{font-family:"Rubik";font-style:italic;src:url("file:///usr/share/fonts/truetype/sand-box/google/Rubik/Rubik-Italic-VariableFont_wght.ttf") format("truetype");font-weight:100 900;font-display:block}
+:root{--paper:#F3EFE7;--ink:#1C1916;--soft:#5E584F;--accent:#B4451A;--rule:#DDD6CA;--zebra:#EDE7DC;--panel:#E7E1D6;--dsoft:#C4BDB3}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:var(--W);height:var(--H);overflow:hidden;background:var(--paper);color:var(--ink);font-family:"Rubik",sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"kern" 1}
+body{position:relative;text-align:right}
+.bar{position:absolute;top:0;left:0;right:0;height:12px;background:var(--accent);z-index:5}
+.stage{position:absolute;display:flex;flex-direction:column;z-index:2}
+.f-feed .stage{top:96px;right:85px;left:85px;bottom:120px}
+.f-story .stage{top:270px;right:85px;left:85px;bottom:430px}
+.f-x .stage{top:66px;right:80px;left:80px;bottom:104px}
+.foot{position:absolute;right:85px;left:85px;bottom:48px;display:flex;justify-content:space-between;align-items:baseline;font-size:26px;color:var(--soft);z-index:5}
+.f-story .foot{bottom:362px}
+.f-x .foot{right:80px;left:80px;bottom:36px;font-size:24px}
+.foot b{color:var(--ink);font-weight:600}
+.ltr{direction:ltr;unicode-bidi:isolate;white-space:nowrap}
+.nowrap{white-space:nowrap}
+.punct{unicode-bidi:isolate}
+em{font-style:normal;color:var(--accent)}
+body.dark{background:var(--ink);color:var(--paper)}
+body.dark .foot{color:var(--dsoft)} body.dark .foot b{color:var(--paper)}
+.hd{flex:0 0 auto}
+h1.t{font-size:66px;font-weight:700;line-height:1.14;letter-spacing:-.01em;text-wrap:balance}
+.f-x h1.t{font-size:58px}
+.f-story h1.t{font-size:74px}
+.sub{font-size:32px;line-height:1.35;color:var(--soft);margin-top:18px;text-wrap:balance}
+.f-x .sub{font-size:28px;margin-top:12px}
+.fit{flex:1 1 auto;min-height:0;overflow:hidden;position:relative;display:flex;flex-direction:column;justify-content:safe center}
+.fit>.in{width:100%}
+.progress{display:flex;gap:10px;direction:ltr;margin-bottom:34px}
+.progress i{flex:1;height:6px;border-radius:3px;background:var(--rule)}
+.progress i.on{background:var(--accent)}
+.dots{background-image:radial-gradient(circle,#D6CEC1 2.2px,transparent 2.6px);background-size:34px 34px;background-position:17px 17px}

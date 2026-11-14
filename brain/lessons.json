@@ -1,0 +1,53 @@
+{
+  "standing_rules": [
+    {
+      "id": "R-01",
+      "date": "",
+      "source": "standing",
+      "rule": "One central topic, one appearance per week. Each central topic from a meeting appears in at most one piece per platform per week (siblings of the same slot on other platforms are fine). Prefer fewer strong posts over many that repeat the same message. Before writing a week plan, list the core message of every piece in one line and cut or merge any two that share it."
+    },
+    {
+      "id": "R-02",
+      "date": "",
+      "source": "standing",
+      "rule": "A comment is given once. When the owner comments on a piece, apply the fix to that piece, to its sibling pieces on every other platform (same slot number), to similar pieces this week, and to all future weeks. Default scope of every lesson is cross-platform unless the comment is clearly platform-specific."
+    },
+    {
+      "id": "R-03",
+      "date": "",
+      "source": "standing",
+      "rule": "Read this file before every task. After every review round run `python3 brain/brain.py pull`, give every new draft lesson a generalized rule, and only then revise copy or visuals. A revised piece goes up as the next version (v2, v3) on the piece and on its siblings."
+    },
+    {
+      "id": "R-04",
+      "date": "",
+      "source": "standing",
+      "rule": "Standing content rules: no em or en dashes; ideas, not people (no names, companies, numbers, deals or secrets of other meeting participants, and no clients); coaching and lecture content stays private; LinkedIn stays around 1000 characters or less and ends with a CTA; no links in the post body (link in the first comment or a DM ask); the configured domain stays on images; every post has a graphic; nothing publishes or schedules without the owner's approval in the review app."
+    },
+    {
+      "id": "R-05",
+      "date": "",
+      "source": "standing",
+      "rule": "Approved examples are the gold standard. Before writing or designing, read the relevant files in brain/approved-examples/ (start with approved-examples/README.md) together with this file, and match their voice, length, structure, CTA and link handling. Reuse the form, never the topic."
+    },
+    {
+      "id": "R-06",
+      "date": "",
+      "source": "standing",
+      "rule": "Publishing windows live in brain/goals.md (for example, LinkedIn only after a set time if the owner posts personally in the morning). Instagram and X times are the team's call unless goals.md says otherwise."
+    },
+    {
+      "id": "R-07",
+      "date": "",
+      "source": "standing",
+      "rule": "Goals and cadence live in brain/goals.md. Batch meetings rather than processing them one by one. Run a batch only when enough meetings pass the quality bar."
+    },
+    {
+      "id": "R-08",
+      "date": "",
+      "source": "standing",
+      "rule": "Inspiration library: brain/inspiration/README.md is for visual style references the owner liked. Carousel Designer reads it before picking or building a template. Style inspiration only: never copy someone else's text, names, characters or logos. The brand look and the template library rules still apply."
+    }
+  ],
+  "lessons": []
+}

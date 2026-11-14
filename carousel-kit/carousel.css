@@ -1,0 +1,304 @@
+/* Personal brand carousel, 1080x1350, Hebrew RTL */
+@page { size: 1080px 1350px; margin: 0; }
+:root {
+  --paper: #F3EFE7;
+  --ink: #1C1916;
+  --ink-soft: #5E584F;
+  --accent: #B4451A;
+  --rule: #DDD6CA;
+  --cta-paper: #F3EFE7;
+  --cta-soft: #C4BDB3;
+  --frame-pad-x: 80px;
+  --frame-pad-top: 64px;
+  --frame-pad-bottom: 56px;
+  --text-max: 85%;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("file:///usr/share/fonts/truetype/sand-box/google/Rubik/Rubik-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 1080px;
+  height: 1350px;
+  overflow: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Rubik", sans-serif;
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.slide {
+  position: relative;
+  text-align: right;
+}
+
+.accent-bar {
+  position: absolute;
+  top: 0; right: 0; left: 0;
+  height: 12px;
+  background: var(--accent);
+  z-index: 2;
+}
+
+/* Large faint slide number, content + CTA only. Fills the field
+   without competing with the type. */
+.bg-num {
+  position: absolute;
+  left: 8px;
+  bottom: 140px;
+  font-size: 520px;
+  font-weight: 800;
+  line-height: 0.72;
+  color: var(--accent);
+  opacity: 0.07;
+  pointer-events: none;
+  user-select: none;
+  direction: ltr;
+  unicode-bidi: isolate;
+  letter-spacing: -0.06em;
+  z-index: 0;
+}
+
+.slide-cta .bg-num {
+  opacity: 0.11;
+}
+
+.frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: var(--frame-pad-top) var(--frame-pad-x) var(--frame-pad-bottom);
+  display: flex;
+  flex-direction: column;
+}
+
+.meta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  flex: 0 0 auto;
+}
+
+.counter {
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.counter .current {
+  color: var(--accent);
+  font-weight: 650;
+}
+
+/* Optical middle: center the title+body in the space between
+   header and footer, then lift it slightly. */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+  padding-bottom: 36px;
+}
+
+.kicker {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1.35;
+  margin-bottom: 28px;
+  max-width: var(--text-max);
+}
+
+.kicker::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  margin-left: 12px;
+  vertical-align: 2px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 104px;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
+  hyphens: none;
+  unicode-bidi: isolate;
+  max-width: var(--text-max);
+}
+
+.body {
+  margin-top: 40px;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--ink);
+  max-width: var(--text-max);
+  text-wrap: pretty;
+  unicode-bidi: isolate;
+}
+
+.items {
+  list-style: none;
+  margin-top: 40px;
+  max-width: var(--text-max);
+}
+
+.items li {
+  position: relative;
+  font-size: 48px;
+  font-weight: 450;
+  line-height: 1.45;
+  padding: 18px 28px 18px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.items li:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+.items li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 32px;
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+}
+
+/* Cover: still larger than content titles */
+.slide-cover .title {
+  font-size: 118px;
+  line-height: 1.16;
+  font-weight: 750;
+}
+.slide-cover .body {
+  margin-top: 44px;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+/* Long titles stay in the 96-110 range rather than shrinking too far */
+.slide-content.title-long .title {
+  font-size: 96px;
+  line-height: 1.2;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  min-height: 88px;
+  flex: 0 0 auto;
+}
+
+.byline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: right;
+}
+
+.byline .name {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+}
+
+.byline .site {
+  font-size: 18px;
+  font-weight: 550;
+  color: var(--accent);
+  letter-spacing: 0.01em;
+}
+
+.swipe {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 550;
+  color: var(--accent);
+}
+
+.swipe .chevron {
+  display: block;
+  width: 28px;
+  height: 16px;
+  flex: 0 0 28px;
+}
+
+.swipe .chevron path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+  white-space: nowrap;
+}
+
+/* Keep the last Hebrew word + swipe emoji together, but do not
+   bidi-override the group (override was mirroring 👈 into 👉). */
+.cue {
+  white-space: nowrap;
+  unicode-bidi: isolate;
+  direction: rtl;
+}
+
+/* The pointing glyph itself is forced LTR so Chrome will not
+   mirror U+1F448 in an RTL paragraph. */
+.point {
+  display: inline-block;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.punct {
+  direction: rtl;
+  unicode-bidi: isolate;
+}
+
+/* CTA: invert to signal the close, same type and accent */
+.slide-cta {
+  background: var(--ink);
+  color: var(--cta-paper);
+}
+.slide-cta .counter { color: var(--cta-soft); }
+.slide-cta .counter .current { color: var(--accent); }
+.slide-cta .title { color: var(--cta-paper); }
+.slide-cta .body { color: var(--cta-paper); }
+.slide-cta .kicker { color: var(--accent); }
+.slide-cta .kicker::before { background: var(--accent); }
+.slide-cta .footer { border-top-color: #3A3530; }
+.slide-cta .byline .name { color: var(--cta-soft); }
+.slide-cta .byline .site { color: var(--accent); }

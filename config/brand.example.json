@@ -1,0 +1,53 @@
+{
+  "owner_name": "Your Name",
+  "owner_id": "owner",
+  "owner_label": "את/ה",
+  "team_label": "הצוות",
+  "domain": "yourdomain.com",
+  "headline": "Your Title",
+  "initials": "YN",
+  "timezone": "Asia/Jerusalem",
+  "cloudinary_folder": "content-review",
+  "blob_prefix": "content-review",
+  "avatar_path": "",
+  "cta_path": "",
+  "colors": {
+    "paper": "#F3EFE7",
+    "ink": "#1C1916",
+    "ink_soft": "#5E584F",
+    "accent": "#B4451A",
+    "panel": "#E7E1D6",
+    "review_accent": "#0F3D3E"
+  },
+  "handles": {
+    "linkedin": "",
+    "instagram": "",
+    "x": "",
+    "facebook": ""
+  },
+  "blocked_terms": [],
+  "latin_allowlist": [
+    "POV",
+    "KPI",
+    "CV",
+    "SQL",
+    "MQL",
+    "GTM",
+    "AE",
+    "BDR",
+    "SDR",
+    "ICP",
+    "CRM",
+    "CRO",
+    "CMO",
+    "CEO",
+    "AI",
+    "RevOps",
+    "Engineer",
+    "Engineers",
+    "Operations",
+    "Sales",
+    "PDF",
+    "B2B"
+  ]
+}

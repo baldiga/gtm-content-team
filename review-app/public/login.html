@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0f3d3e" />
+    <title>כניסה · תוכן לאישור</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="gate login-page">
+      <h1>תוכן לאישור</h1>
+      <p>הזינו את הסיסמה כדי לעבור על הפוסטים.</p>
+      <form id="login-form">
+        <label class="sr-only" for="password">סיסמה</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required />
+        <button class="send" type="submit">כניסה</button>
+      </form>
+      <p id="login-error" class="login-error" hidden></p>
+    </main>
+    <script>
+      const form = document.getElementById("login-form");
+      const errorEl = document.getElementById("login-error");
+      form.addEventListener("submit", async (ev) => {
+        ev.preventDefault();
+        errorEl.hidden = true;
+        const password = new FormData(form).get("password");
+        const btn = form.querySelector("button");
+        btn.disabled = true;
+        try {
+          const res = await fetch("/api/login", {
+            method: "POST",
+            credentials: "include",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ password }),
+          });
+          const data = await res.json().catch(() => ({}));
+          if (res.ok && data.ok) {
+            location.href = "/";
+            return;
+          }
+          errorEl.textContent = data.error || "הכניסה נכשלה, נסו שוב.";
+          errorEl.hidden = false;
+        } catch {
+          errorEl.textContent = "הכניסה נכשלה, נסו שוב.";
+          errorEl.hidden = false;
+        } finally {
+          btn.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>

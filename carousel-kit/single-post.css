@@ -1,0 +1,275 @@
+/* Single LinkedIn/IG images: quote card, checklist, path. Same brand as carousels. */
+@page { size: 1080px 1350px; margin: 0; }
+:root {
+  --paper: #F3EFE7;
+  --ink: #1C1916;
+  --ink-soft: #5E584F;
+  --accent: #B4451A;
+  --rule: #DDD6CA;
+  --frame-pad-x: 80px;
+  --frame-pad-top: 72px;
+  --frame-pad-bottom: 64px;
+  --text-max: 85%;
+  --canvas-h: 1350px;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("file:///usr/share/fonts/truetype/sand-box/google/Rubik/Rubik-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 1080px;
+  height: var(--canvas-h);
+  overflow: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Rubik", sans-serif;
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.slide { position: relative; text-align: right; }
+
+.accent-bar {
+  position: absolute;
+  top: 0; right: 0; left: 0;
+  height: 12px;
+  background: var(--accent);
+  z-index: 2;
+}
+
+.frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: var(--frame-pad-top) var(--frame-pad-x) var(--frame-pad-bottom);
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+  padding-bottom: 24px;
+}
+
+.ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+  white-space: nowrap;
+}
+.punct { direction: rtl; unicode-bidi: isolate; }
+.nowrap { white-space: nowrap; }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  min-height: 88px;
+  flex: 0 0 auto;
+}
+
+.byline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: right;
+}
+.byline .name {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+}
+.byline .site {
+  font-size: 18px;
+  font-weight: 550;
+  color: var(--accent);
+  letter-spacing: 0.01em;
+}
+
+/* ----- Quote card ----- */
+.quote-block {
+  max-width: var(--text-max);
+  position: relative;
+}
+.quote-mark {
+  font-size: 180px;
+  font-weight: 700;
+  line-height: 0.7;
+  color: var(--accent);
+  opacity: 0.22;
+  margin-bottom: 8px;
+  user-select: none;
+  pointer-events: none;
+  letter-spacing: -0.06em;
+}
+.quote-text {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.28;
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
+  hyphens: none;
+  unicode-bidi: isolate;
+}
+.quote-text .q-line {
+  display: block;
+}
+.support {
+  max-width: var(--text-max);
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.support p {
+  font-size: 40px;
+  font-weight: 450;
+  line-height: 1.4;
+  color: var(--ink);
+  text-wrap: pretty;
+  hyphens: none;
+  unicode-bidi: isolate;
+}
+
+/* ----- Checklist ----- */
+.title {
+  font-weight: 750;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
+  hyphens: none;
+  unicode-bidi: isolate;
+  max-width: var(--text-max);
+  margin-bottom: 56px;
+}
+.title .q-line { display: block; }
+.checks {
+  list-style: none;
+  max-width: var(--text-max);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.checks li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 28px 0;
+  border-top: 1px solid var(--rule);
+  unicode-bidi: isolate;
+}
+.checks li:last-child {
+  padding-bottom: 8px;
+}
+.checks .num {
+  flex: 0 0 auto;
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.35;
+  direction: ltr;
+  unicode-bidi: isolate;
+  min-width: 1.2em;
+  text-align: right;
+  padding-top: 2px;
+}
+.checks .item {
+  flex: 1;
+  font-size: 44px;
+  font-weight: 450;
+  line-height: 1.4;
+  color: var(--ink);
+  text-wrap: pretty;
+  hyphens: none;
+  unicode-bidi: isolate;
+  min-width: 0;
+}
+
+/* ----- Path (Thursday, same system as Wednesday) ----- */
+body.path-post .title {
+  font-size: 64px;
+  line-height: 1.2;
+  margin-bottom: 48px;
+  text-wrap: pretty;
+}
+body.path-post .title .q-line {
+  display: block;
+}
+/* DOM order is step 1..4, read top to bottom (single posts). */
+.path {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  max-width: var(--text-max);
+  position: relative;
+  padding-right: 36px;
+}
+.path::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 18px;
+  bottom: 18px;
+  width: 2px;
+  background: var(--accent);
+  opacity: 0.45;
+}
+.path li {
+  position: relative;
+  font-size: 48px;
+  line-height: 1.35;
+  padding: 20px 0;
+  color: var(--ink);
+  unicode-bidi: isolate;
+  text-wrap: pretty;
+}
+.path li:nth-child(1) { font-weight: 400; }
+.path li:nth-child(2) { font-weight: 450; }
+.path li:nth-child(3) { font-weight: 600; }
+.path li:nth-child(4) { font-weight: 700; }
+
+/* Story canvas: all type inside IG safe zones. */
+html.format-story, html.format-story body {
+  height: 1920px;
+}
+html.format-story { --canvas-h: 1920px; }
+html.format-story .accent-bar {
+  top: 250px;
+  height: 8px;
+}
+html.format-story .frame {
+  padding: 250px 80px 340px;
+}
+html.format-story .quote-mark { font-size: 160px; }
+html.format-story .quote-text { font-size: 68px; }
+html.format-story .support { margin-top: 52px; padding-top: 40px; }
+html.format-story .support p { font-size: 44px; }
+html.format-story .title { font-size: 80px; margin-bottom: 64px; }
+html.format-story .checks .num { font-size: 50px; }
+html.format-story .checks .item { font-size: 50px; }
+html.format-story .checks li { padding: 32px 0; }
+html.format-story body.path-post .title { font-size: 68px; margin-bottom: 56px; }
+html.format-story .path li { font-size: 54px; padding: 24px 0; }
+html.format-story .byline .name { font-size: 22px; }
+html.format-story .byline .site { font-size: 20px; }

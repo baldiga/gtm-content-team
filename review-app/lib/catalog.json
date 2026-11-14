@@ -1,0 +1,30 @@
+{
+  "week": "example-week",
+  "title": "תוכן לאישור",
+  "week_label": "שבוע לדוגמה",
+  "updated": "",
+  "timezone": "Asia/Jerusalem",
+  "pieces": [
+    {
+      "code": "LI-DEMO",
+      "title": "פוסט לדוגמה",
+      "platform": "linkedin",
+      "platform_he": "לינקדאין",
+      "account": "personal",
+      "day": "sun",
+      "day_he": "ראשון",
+      "date": "",
+      "date_he": "",
+      "body": "זה פוסט לדוגמה בלבד, לא תוכן אמיתי. החליפו את הקטלוג בשבוע שלכם אחרי שהכותב והמעצב מעלים טיוטות.",
+      "chars": 96,
+      "char_limit": 1000,
+      "link": "none",
+      "first_comment": "",
+      "version": "v1",
+      "version_note": "",
+      "file": "",
+      "images": [],
+      "image_pending": true
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+/* Single-image path post, 1080x1350 or 1080x1920 story */
+@page { size: 1080px 1350px; margin: 0; }
+:root {
+  --paper: #F3EFE7;
+  --ink: #1C1916;
+  --ink-soft: #5E584F;
+  --accent: #B4451A;
+  --rule: #DDD6CA;
+  --frame-pad-x: 80px;
+  --frame-pad-top: 72px;
+  --frame-pad-bottom: 64px;
+  --text-max: 85%;
+  --canvas-h: 1350px;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("file:///usr/share/fonts/truetype/sand-box/google/Rubik/Rubik-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 1080px;
+  height: var(--canvas-h);
+  overflow: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Rubik", sans-serif;
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.slide { position: relative; text-align: right; }
+
+.accent-bar {
+  position: absolute;
+  top: 0; right: 0; left: 0;
+  height: 12px;
+  background: var(--accent);
+  z-index: 2;
+}
+
+.frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: var(--frame-pad-top) var(--frame-pad-x) var(--frame-pad-bottom);
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+  padding-bottom: 24px;
+}
+
+.title {
+  font-weight: 750;
+  font-size: 104px;
+  line-height: 1.16;
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
+  hyphens: none;
+  unicode-bidi: isolate;
+  max-width: var(--text-max);
+  margin-bottom: 56px;
+}
+
+/* DOM order is step 1..4; column-reverse puts step 1 at the bottom
+   (he starts low and grows up), which matches "הוא גדל איתך". */
+.path {
+  list-style: none;
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: var(--text-max);
+  position: relative;
+  padding-right: 36px;
+}
+
+.path::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 18px;
+  bottom: 18px;
+  width: 2px;
+  background: var(--accent);
+  opacity: 0.45;
+}
+
+.path li {
+  position: relative;
+  font-size: 50px;
+  line-height: 1.35;
+  padding: 20px 0;
+  color: var(--ink);
+  unicode-bidi: isolate;
+}
+
+/* Slightly stronger type as the path rises (DOM 1 at bottom, 4 at top). */
+.path li:nth-child(1) { font-weight: 400; }
+.path li:nth-child(2) { font-weight: 450; }
+.path li:nth-child(3) { font-weight: 600; }
+.path li:nth-child(4) { font-weight: 700; }
+
+.ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+  white-space: nowrap;
+}
+.punct { direction: rtl; unicode-bidi: isolate; }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  min-height: 88px;
+  flex: 0 0 auto;
+}
+
+.byline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: right;
+}
+.byline .name {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+}
+.byline .site {
+  font-size: 18px;
+  font-weight: 550;
+  color: var(--accent);
+  letter-spacing: 0.01em;
+}
+
+/* Story canvas: keep all type inside IG safe zones. */
+html.format-story, html.format-story body {
+  height: 1920px;
+}
+html.format-story { --canvas-h: 1920px; }
+html.format-story .accent-bar {
+  top: 250px;
+  height: 8px;
+}
+html.format-story .frame {
+  padding: 250px 80px 340px;
+}
+html.format-story .title {
+  font-size: 120px;
+  margin-bottom: 64px;
+}
+html.format-story .path li {
+  font-size: 56px;
+  padding: 24px 0;
+}
+html.format-story .byline .name { font-size: 22px; }
+html.format-story .byline .site { font-size: 20px; }

@@ -1,0 +1,12 @@
+.env.local
+.env
+data/state.json
+data/images/
+tmp/
+prepared/
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+node_modules/
+.vercel

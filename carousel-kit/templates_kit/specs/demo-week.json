@@ -1,0 +1,31 @@
+[
+  {
+    "piece": "LI-DEMO",
+    "template": 9,
+    "name": "demo-quote-card",
+    "quote": "זו שורת דוגמה בלבד. החליפו בציטוט שלכם.",
+    "initials": "YN",
+    "headline": "Your Title",
+    "person": "Your Name"
+  },
+  {
+    "piece": "LI-DEMO2",
+    "template": 5,
+    "name": "demo-before-after",
+    "title": "לפני, ואחרי: דוגמה",
+    "before": {
+      "title": "לפני",
+      "rows": [
+        "שורה לדוגמה א",
+        "שורה לדוגמה ב"
+      ]
+    },
+    "after": {
+      "title": "אחרי",
+      "rows": [
+        "שורה לדוגמה ג",
+        "שורה לדוגמה ד"
+      ]
+    }
+  }
+]

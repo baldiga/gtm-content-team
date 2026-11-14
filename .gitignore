@@ -1,0 +1,49 @@
+# Secrets and local env
+.env
+.env.local
+.env.*.local
+
+# Brand overrides (may contain a private avatar path)
+config/brand.json
+
+# Dependencies and build
+node_modules/
+.vercel
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Generated outputs
+outputs/
+review-app/data/state.json
+review-app/data/images/
+review-app/prepared/
+review-app/tmp/
+carousel-kit/templates_kit/_test/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.webp
+!docs/**/*.png
+
+# Live workspace data (do not publish)
+ledger.csv
+brain/raw/*.json
+brain/captured.json
+weeks/*
+!weeks/README.md
+!weeks/.gitkeep
+idea-bank/*
+!idea-bank/README.md
+!idea-bank/.gitkeep
+insight-packs/*
+!insight-packs/README.md
+!insight-packs/.gitkeep
+review/*
+!review/README.md
+approved-examples-notes
+brain/approved-examples/*/
+!brain/approved-examples/README.md
