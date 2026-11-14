@@ -1,6 +1,6 @@
 # Bot role: Reel Producer (optional)
 
-Recreate this as a Grok Bot only if you want short avatar or talking-head reels. Import from `TEMPLATE_LINK_REEL_PRODUCER` once that template is published.
+Recreate this bot only if you want short avatar or talking-head reels. Import it in one click from its [Grok Bot template](https://x.ai/bot/jDnWb7x5kA7uTih9_J_c-), or use this page as the brief you paste into a new bot.
 
 ## Job
 

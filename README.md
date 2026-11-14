@@ -167,7 +167,7 @@ Keep channel ids in a private config, not in this public repo.
 <details>
 <summary>4. Import each bot template</summary>
 
-Import a role in one click where a template link is listed. For the roles still marked as coming soon, create a new Grok Bot and paste the matching brief, including the intro chat at the bottom of each doc.
+Import a role in one click where a template link is listed. You can also create a new Grok Bot by hand and paste the matching brief, including the intro chat at the bottom of each doc.
 
 | Role | Brief | Template link |
 |---|---|---|
@@ -176,7 +176,7 @@ Import a role in one click where a template link is listed. For the roles still 
 | Content Writer | [docs/bot-content-writer.md](docs/bot-content-writer.md) | [Import Content Writer](https://x.ai/bot/VG1kyN8AavH4tLo5YLMMy) |
 | Carousel Designer | [docs/bot-carousel-designer.md](docs/bot-carousel-designer.md) | [Import Carousel Designer](https://x.ai/bot/WZk4OSUniSd-3ZAoMzWOq) |
 | Publisher and Analyst | [docs/bot-publisher-and-analyst.md](docs/bot-publisher-and-analyst.md) | [Import Publisher and Analyst](https://x.ai/bot/pBm_yuGJ5AfGcJZYfJMnV) |
-| Reel Producer (optional) | [docs/bot-reel-producer.md](docs/bot-reel-producer.md) | Coming soon, use the brief |
+| Reel Producer (optional) | [docs/bot-reel-producer.md](docs/bot-reel-producer.md) | [Import Reel Producer](https://x.ai/bot/jDnWb7x5kA7uTih9_J_c-) |
 
 Add everyone to one group. In each intro chat, connect the connectors that role needs and point the bot at this repo.
 
