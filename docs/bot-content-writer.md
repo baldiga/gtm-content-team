@@ -32,4 +32,4 @@ It does not need Granola or Buffer.
 
 ## Intro chat
 
-Ask the owner for voice notes (how they already write, languages, things they never say). Point them at this repo and at `AFFILIATE_LINK_GRANOLA` only if they still need a meeting tool. Remind them that nothing goes out without their approval.
+Ask the owner for voice notes (how they already write, languages, things they never say). Point them at this repo and at [granola.ai](https://www.granola.ai) only if they still need a meeting tool. Remind them that nothing goes out without their approval.

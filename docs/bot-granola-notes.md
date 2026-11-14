@@ -30,4 +30,4 @@ Optional: a calendar connector if you want the bot to see what was scheduled, no
 
 ## Intro chat (paste after the template is imported)
 
-Ask the new owner to connect Granola, point the bot at this repo, and fill `config/brand.json`. If they do not have Granola yet, send them `AFFILIATE_LINK_GRANOLA`.
+Ask the new owner to connect Granola, point the bot at this repo, and fill `config/brand.json`. If they do not have Granola yet, send them [granola.ai](https://www.granola.ai).

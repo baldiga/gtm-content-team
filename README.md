@@ -193,14 +193,14 @@ Granola Notes writes an insight pack. Content Writer drafts. Carousel Designer r
 
 ## Tools I use
 
-If you sign up through one of these links, it may support the author of this package. Replace the placeholders with your own affiliate URLs before you share the repo.
+Some of these are referral links, so signing up through them may support the author of this package. If you fork and share it, swap in your own links.
 
 | Tool | What it is for | Link |
 |---|---|---|
-| Granola | Meeting notes that start the pipeline | `AFFILIATE_LINK_GRANOLA` |
-| Buffer | Scheduling to LinkedIn, Instagram and X | `AFFILIATE_LINK_BUFFER` |
-| Cloudinary | Public image hosting for scheduled posts | `AFFILIATE_LINK_CLOUDINARY` |
-| Vercel | Hosting the private review app | `AFFILIATE_LINK_VERCEL` |
+| Granola | Meeting notes that start the pipeline | [granola.ai](https://www.granola.ai) |
+| Buffer | Scheduling to LinkedIn, Instagram and X | [buffer.com](https://buffer.com) |
+| Cloudinary | Public image hosting for scheduled posts | [cloudinary.com](https://cloudinary.com) |
+| Vercel | Hosting the private review app | [vercel.com](https://vercel.com) |
 | APIhub (optional) | Short avatar reels, if you turn that on | [apihub.co.il](https://apihub.co.il/r/baldiga) |
 
 ## FAQ
@@ -248,9 +248,9 @@ The standing rule is that nothing goes out without your approval. After the firs
 </details>
 
 <details>
-<summary>What do I do with the affiliate placeholders?</summary>
+<summary>Can I swap the tool links for my own?</summary>
 
-Replace `AFFILIATE_LINK_*` in this README (and in each bot's intro chat, if you mention a tool) with your own links before you share the package. Leave them as placeholders until you have the URLs.
+Yes. Edit the Tools I use table (and the tool links in `docs/bot-*.md`) with your own referral links before you share your fork.
 
 </details>
 

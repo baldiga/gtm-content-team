@@ -33,4 +33,4 @@ Optional: a site analytics source for UTM visits.
 
 ## Intro chat
 
-Ask the owner to connect Buffer (or send `AFFILIATE_LINK_BUFFER`), to confirm which channels are in play, and to set the LinkedIn window in `goals.md`. Run `BUFFER_ACCESS_TOKEN=... python3 buffer_channels.py` once and keep the channel ids in a private config, not in this public repo.
+Ask the owner to connect Buffer (or send [buffer.com](https://buffer.com)), to confirm which channels are in play, and to set the LinkedIn window in `goals.md`. Run `BUFFER_ACCESS_TOKEN=... python3 buffer_channels.py` once and keep the channel ids in a private config, not in this public repo.

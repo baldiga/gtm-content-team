@@ -30,4 +30,4 @@ It usually does not need Granola, Buffer or Cloudinary itself, but it should kno
 
 ## Intro chat
 
-Ask the owner to import the other bot templates, to add everyone to one group, to connect Granola, Buffer, Cloudinary and Vercel (or send the affiliate placeholders), and to fill `config/brand.json` plus `brain/goals.md`. Confirm that every piece needs their approval, at least for the first month.
+Ask the owner to import the other bot templates, to add everyone to one group, to connect Granola, Buffer, Cloudinary and Vercel (tool links are in the README), and to fill `config/brand.json` plus `brain/goals.md`. Confirm that every piece needs their approval, at least for the first month.
