@@ -1,6 +1,6 @@
 # Bot role: Content Writer
 
-Recreate this as a Grok Bot, then import it from `TEMPLATE_LINK_CONTENT_WRITER` once that template is published.
+Import this bot in one click from its [Grok Bot template](https://x.ai/bot/VG1kyN8AavH4tLo5YLMMy), or recreate it by hand using this page as the brief you paste into a new bot.
 
 ## Job
 

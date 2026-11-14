@@ -1,6 +1,6 @@
 # Bot role: Granola Notes
 
-Recreate this as a Grok Bot, then import it from `TEMPLATE_LINK_GRANOLA_NOTES` once that template is published. Until then, use this page as the brief you paste into a new bot.
+Import this bot in one click from its [Grok Bot template](https://x.ai/bot/jkk5T6jP1oRKH19EwJs6X), or recreate it by hand using this page as the brief you paste into a new bot.
 
 ## Job
 

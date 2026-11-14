@@ -19,7 +19,7 @@
 
 </div>
 
-This repository is the shared kit: the review app, the company brain, the carousel renderer, and empty working folders. The bots live in your Grok Bot account. Import one template per role (placeholder links below), point them at a clone of this repo, and fill in your brand.
+This repository is the shared kit: the review app, the company brain, the carousel renderer, and empty working folders. The bots live in your Grok Bot account. Import one template per role (links below), point them at a clone of this repo, and fill in your brand.
 
 It does not include anyone's meetings, posts, photos, API keys, or analytics.
 
@@ -101,7 +101,7 @@ Local setup and the Vercel deploy notes live in [review-app/README.md](review-ap
 
    The footer will show the name and domain from `config/brand.json`.
 
-5. **Create the bots** (about 3 minutes now, or later the same day): open each brief in `docs/`, create a Grok Bot, and paste the intro chat. Add them to one group. Template import links are placeholders until you publish the templates.
+5. **Create the bots** (about 3 minutes now, or later the same day): open each brief in `docs/`, create a Grok Bot, and paste the intro chat. Add them to one group. Where a role has a ready-made template, import it instead (see step 4 of the full setup).
 
 That is enough to see the loop. Connecting Granola, Buffer, Cloudinary and Vercel is the next section.
 
@@ -167,16 +167,16 @@ Keep channel ids in a private config, not in this public repo.
 <details>
 <summary>4. Import each bot template</summary>
 
-Replace these placeholders with the public Grok Bot template links when they are available. Until a link exists, create a new Grok Bot and paste the matching brief, including the intro chat at the bottom of each doc.
+Import a role in one click where a template link is listed. For the roles still marked as coming soon, create a new Grok Bot and paste the matching brief, including the intro chat at the bottom of each doc.
 
 | Role | Brief | Template link |
 |---|---|---|
-| Coordinator | [docs/bot-coordinator.md](docs/bot-coordinator.md) | `TEMPLATE_LINK_COORDINATOR` |
-| Granola Notes | [docs/bot-granola-notes.md](docs/bot-granola-notes.md) | `TEMPLATE_LINK_GRANOLA_NOTES` |
-| Content Writer | [docs/bot-content-writer.md](docs/bot-content-writer.md) | `TEMPLATE_LINK_CONTENT_WRITER` |
-| Carousel Designer | [docs/bot-carousel-designer.md](docs/bot-carousel-designer.md) | `TEMPLATE_LINK_CAROUSEL_DESIGNER` |
-| Publisher and Analyst | [docs/bot-publisher-and-analyst.md](docs/bot-publisher-and-analyst.md) | `TEMPLATE_LINK_PUBLISHER` |
-| Reel Producer (optional) | [docs/bot-reel-producer.md](docs/bot-reel-producer.md) | `TEMPLATE_LINK_REEL_PRODUCER` |
+| Coordinator | [docs/bot-coordinator.md](docs/bot-coordinator.md) | Coming soon, use the brief |
+| Granola Notes | [docs/bot-granola-notes.md](docs/bot-granola-notes.md) | [Import Granola Notes](https://x.ai/bot/jkk5T6jP1oRKH19EwJs6X) |
+| Content Writer | [docs/bot-content-writer.md](docs/bot-content-writer.md) | [Import Content Writer](https://x.ai/bot/VG1kyN8AavH4tLo5YLMMy) |
+| Carousel Designer | [docs/bot-carousel-designer.md](docs/bot-carousel-designer.md) | [Import Carousel Designer](https://x.ai/bot/WZk4OSUniSd-3ZAoMzWOq) |
+| Publisher and Analyst | [docs/bot-publisher-and-analyst.md](docs/bot-publisher-and-analyst.md) | Coming soon, use the brief |
+| Reel Producer (optional) | [docs/bot-reel-producer.md](docs/bot-reel-producer.md) | Coming soon, use the brief |
 
 Add everyone to one group. In each intro chat, connect the connectors that role needs and point the bot at this repo.
 

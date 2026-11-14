@@ -1,6 +1,6 @@
 # Bot role: Carousel Designer
 
-Recreate this as a Grok Bot, then import it from `TEMPLATE_LINK_CAROUSEL_DESIGNER` once that template is published.
+Import this bot in one click from its [Grok Bot template](https://x.ai/bot/WZk4OSUniSd-3ZAoMzWOq), or recreate it by hand using this page as the brief you paste into a new bot.
 
 ## Job
 
