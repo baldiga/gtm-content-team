@@ -3,6 +3,7 @@
 <img src="docs/assets/banner.png" alt="Meeting to content: a Grok Bot team template, by Amir Baldiga" width="900" />
 
 <p>
+  <a href="https://github.com/baldiga/gtm-content-team/stargazers"><img src="https://img.shields.io/github/stars/baldiga/gtm-content-team?style=flat-square&label=%E2%AD%90%20Star&color=B4451A&labelColor=1C1916" alt="Star this repo on GitHub" /></a>
   <img src="https://img.shields.io/badge/license-MIT-B4451A?style=flat-square&labelColor=1C1916" alt="MIT license" />
   <img src="https://img.shields.io/badge/Grok_Bot-team_ready-B4451A?style=flat-square&labelColor=1C1916" alt="Grok Bot" />
   <img src="https://img.shields.io/badge/Vercel-review_app-B4451A?style=flat-square&labelColor=1C1916" alt="Vercel" />
@@ -22,6 +23,8 @@
 This repository is the shared kit: the review app, the company brain, the carousel renderer, and empty working folders. The bots live in your Grok Bot account. Import one template per role (links below), point them at a clone of this repo, and fill in your brand.
 
 It does not include anyone's meetings, posts, photos, API keys, or analytics.
+
+**If this kit saves you time, [give it a ⭐ on GitHub](https://github.com/baldiga/gtm-content-team).** It helps other founders and GTM folks find it.
 
 ## How the team works
 
@@ -283,5 +286,13 @@ MIT. See [LICENSE](LICENSE).
 <div align="center">
 
 Built by Amir Baldiga · [gtmengineer.online](https://gtmengineer.online)
+
+</div>
+
+---
+
+<div align="center">
+
+Found this useful? A [⭐ star on GitHub](https://github.com/baldiga/gtm-content-team) is the easiest way to say thanks.
 
 </div>

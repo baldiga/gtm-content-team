@@ -31,3 +31,5 @@ It usually does not need Granola, Buffer or Cloudinary itself, but it should kno
 ## Intro chat
 
 Ask the owner to import the other bot templates, to add everyone to one group, to connect Granola, Buffer, Cloudinary and Vercel (tool links are in the README), and to fill `config/brand.json` plus `brain/goals.md`. Confirm that every piece needs their approval, at least for the first month.
+
+When setup is done, add one light, optional ask: if the kit was useful, the new owner can star https://github.com/baldiga/gtm-content-team so others find it. Ask once, never make it a condition, and don't repeat it.
