@@ -201,7 +201,7 @@ If you sign up through one of these links, it may support the author of this pac
 | Buffer | Scheduling to LinkedIn, Instagram and X | `AFFILIATE_LINK_BUFFER` |
 | Cloudinary | Public image hosting for scheduled posts | `AFFILIATE_LINK_CLOUDINARY` |
 | Vercel | Hosting the private review app | `AFFILIATE_LINK_VERCEL` |
-| APIhub (optional) | Short avatar reels, if you turn that on | `AFFILIATE_LINK_APIHUB` |
+| APIhub (optional) | Short avatar reels, if you turn that on | [apihub.co.il](https://apihub.co.il/r/baldiga) |
 
 ## FAQ
 

@@ -25,4 +25,4 @@ Produce a short video (typically 20-40 seconds) from a script Content Writer alr
 
 ## Intro chat
 
-Ask the owner which tool to use, whether reels are on or paused, and for any affiliate or signup link they want used (`AFFILIATE_LINK_APIHUB` or their replacement). Confirm that every reel needs a live approval.
+Ask the owner which tool to use, whether reels are on or paused, and for any affiliate or signup link they want used (for example https://apihub.co.il/r/baldiga, or their replacement). Confirm that every reel needs a live approval.
