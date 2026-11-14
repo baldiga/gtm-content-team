@@ -171,11 +171,11 @@ Import a role in one click where a template link is listed. For the roles still 
 
 | Role | Brief | Template link |
 |---|---|---|
-| Coordinator | [docs/bot-coordinator.md](docs/bot-coordinator.md) | Coming soon, use the brief |
+| Coordinator | [docs/bot-coordinator.md](docs/bot-coordinator.md) | [Import Coordinator](https://x.ai/bot/cKfQtFjLlXV3jKgL2SyvI) |
 | Granola Notes | [docs/bot-granola-notes.md](docs/bot-granola-notes.md) | [Import Granola Notes](https://x.ai/bot/jkk5T6jP1oRKH19EwJs6X) |
 | Content Writer | [docs/bot-content-writer.md](docs/bot-content-writer.md) | [Import Content Writer](https://x.ai/bot/VG1kyN8AavH4tLo5YLMMy) |
 | Carousel Designer | [docs/bot-carousel-designer.md](docs/bot-carousel-designer.md) | [Import Carousel Designer](https://x.ai/bot/WZk4OSUniSd-3ZAoMzWOq) |
-| Publisher and Analyst | [docs/bot-publisher-and-analyst.md](docs/bot-publisher-and-analyst.md) | Coming soon, use the brief |
+| Publisher and Analyst | [docs/bot-publisher-and-analyst.md](docs/bot-publisher-and-analyst.md) | [Import Publisher and Analyst](https://x.ai/bot/pBm_yuGJ5AfGcJZYfJMnV) |
 | Reel Producer (optional) | [docs/bot-reel-producer.md](docs/bot-reel-producer.md) | Coming soon, use the brief |
 
 Add everyone to one group. In each intro chat, connect the connectors that role needs and point the bot at this repo.

@@ -1,6 +1,6 @@
 # Bot role: Coordinator
 
-Recreate this as a Grok Bot, then import it from `TEMPLATE_LINK_COORDINATOR` once that template is published. This is the team lead the owner talks to day to day.
+Import this bot in one click from its [Grok Bot template](https://x.ai/bot/cKfQtFjLlXV3jKgL2SyvI), or recreate it by hand using this page as the brief you paste into a new bot. This is the team lead the owner talks to day to day.
 
 ## Job
 

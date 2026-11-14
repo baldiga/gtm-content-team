@@ -1,6 +1,6 @@
 # Bot role: Publisher and Analyst
 
-Recreate this as a Grok Bot, then import it from `TEMPLATE_LINK_PUBLISHER` once that template is published.
+Import this bot in one click from its [Grok Bot template](https://x.ai/bot/pBm_yuGJ5AfGcJZYfJMnV), or recreate it by hand using this page as the brief you paste into a new bot.
 
 ## Job
 
