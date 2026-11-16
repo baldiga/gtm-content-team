@@ -114,7 +114,7 @@ That is enough to see the loop. Connecting Granola, Buffer, Cloudinary and Verce
 <summary>Prerequisites</summary>
 
 - A [Grok Bot](https://grok.com) account, so you can create the team
-- [Granola](https://granola.ai), for meeting notes
+- [Granola](https://go.granola.ai/amir-baldiga), for meeting notes
 - [Buffer](https://buffer.com), for scheduling (every channel you actually publish to)
 - [Cloudinary](https://cloudinary.com), for public image URLs that Buffer can fetch
 - [Vercel](https://vercel.com), to host the review app
@@ -200,7 +200,7 @@ Some of these are referral links, so signing up through them may support the aut
 
 | Tool | What it is for | Link |
 |---|---|---|
-| Granola | Meeting notes that start the pipeline | [granola.ai](https://www.granola.ai) |
+| Granola | Meeting notes that start the pipeline | [granola.ai](https://go.granola.ai/amir-baldiga) |
 | Buffer | Scheduling to LinkedIn, Instagram and X | [buffer.com](https://buffer.com) |
 | Cloudinary | Public image hosting for scheduled posts | [cloudinary.com](https://cloudinary.com) |
 | Vercel | Hosting the private review app | [vercel.com](https://vercel.com) |
